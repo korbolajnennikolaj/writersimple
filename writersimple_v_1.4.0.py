@@ -1,42 +1,49 @@
-def write(what, time, addition):
+def write(text, time, addition):
     ready = ""
+    ready2 = ""
     for i in range(time):
         for i in range(addition):
-            ready = ready + what
+            ready = ready + text
             ready = ready + " "
-        print(ready)
+        ready2 = ready2 + ready + "\n"
         ready = ""
+    return ready2
 
-def write_revers(what, time, addition):
+def write_revers(text, time, addition):
     ready = ""
+    ready2 = ""
     for i in range(time):
         for i in range(addition):
-            ready = ready + what[::-1]
+            ready = ready + text[::-1]
             ready = ready + " "
-        print(ready)
+        ready2 = ready2 + ready + "\n"
         ready = ""
+    return ready2
 
-def write_combo(what, time, addition):
+def write_combo(text, time, addition):
     ready = ""
+    ready2 = ""
     a = 0
     for i in range(time):
         for i in range(addition):
             if a == 0:
-                ready = ready + what
+                ready = ready + text
                 ready = ready + " "
                 a = 1
             elif a == 1:
-                ready = ready + what[::-1]
+                ready = ready + text[::-1]
                 ready = ready + " "
                 a = 0
-
-        print(ready)
+        ready2 = ready2 + ready + "\n"
         ready = ""
+    return ready2
 
 def writer_cool(time, addition):
     ready = ""
+    ready2 = ""
     for i in range(time):
         for i in range(addition):
             ready = ready + "thanks :) "
-        print(ready)
+        ready2 = ready2 + ready + "\n"
         ready = ""
+    return ready2
